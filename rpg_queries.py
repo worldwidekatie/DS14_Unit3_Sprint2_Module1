@@ -23,24 +23,24 @@ print('---------------')
 print("There are ", result[0][0], "Total Characters Including:")
 
 # Q2: How many of each specific subclass?
-query1 = 'SELECT COUNT(character_ptr_id) FROM charactercreator_cleric;'
-result = curs.execute(query1).fetchall()
+query = 'SELECT COUNT(character_ptr_id) FROM charactercreator_cleric;'
+result = curs.execute(query).fetchall()
 print(result[0][0], "Clerics")
 
-query2 = 'SELECT COUNT(character_ptr_id) FROM charactercreator_fighter;'
-result = curs.execute(query2).fetchall()
+query = 'SELECT COUNT(character_ptr_id) FROM charactercreator_fighter;'
+result = curs.execute(query).fetchall()
 print(result[0][0], "Fighters")
 
-query4 = 'SELECT COUNT(character_ptr_id) FROM charactercreator_thief;'
-result = curs.execute(query4).fetchall()
+query = 'SELECT COUNT(character_ptr_id) FROM charactercreator_thief;'
+result = curs.execute(query).fetchall()
 print(result[0][0], "Thieves")
 
-query3 = 'SELECT COUNT(character_ptr_id) FROM charactercreator_mage;'
-result = curs.execute(query3).fetchall()
+query = 'SELECT COUNT(character_ptr_id) FROM charactercreator_mage;'
+result = curs.execute(query).fetchall()
 print(result[0][0], "Mages")
 
-query5 = 'SELECT COUNT(mage_ptr_id) FROM charactercreator_necromancer;'
-result = curs.execute(query5).fetchall()
+query = 'SELECT COUNT(mage_ptr_id) FROM charactercreator_necromancer;'
+result = curs.execute(query).fetchall()
 print("and", result[0][0], "Mages are Necromancers")
 
 
@@ -55,8 +55,8 @@ print("There are", result[0][0], "Total Items")
 
 
 # Q4: How many of the items are weapons? How many are not?
-query6 = 'SELECT COUNT(item_ptr_id) FROM armory_weapon;'
-result1 = curs.execute(query6).fetchall()
+query = 'SELECT COUNT(item_ptr_id) FROM armory_weapon;'
+result1 = curs.execute(query).fetchall()
 print(result1[0][0], "Items are Weapons")
 print(result[0][0] - result1[0][0], "Items are not Weapons")
 
